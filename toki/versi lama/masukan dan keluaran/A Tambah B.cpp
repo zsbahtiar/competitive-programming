@@ -3,13 +3,13 @@
 using namespace std;
 
 int main(){
-    int a, b, hasil;
+    int nilaiA, nilaiB;
 
-    scanf("%d",&a);
-    scanf("%d",&b);
+    scanf("%d",&nilaiA);
+    scanf("%d",&nilaiB);
 
     //sum a+b and printout
-    printf("%d\n",a+b);
+    printf("%d\n",nilaiA+nilaiB);
 
     return 0;
 }
