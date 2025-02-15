@@ -71,5 +71,6 @@ func ValidParentheses(s string) bool {
 		}
 	}
 
+	// key of parentheses, using the LIFO
 	return len(temp) == 0
 }
