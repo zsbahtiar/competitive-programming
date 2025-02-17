@@ -2,23 +2,23 @@ package leetcode
 
 import "testing"
 
-func TestRemoveDuplicatesfromSortedArray(t *testing.T) {
+func TestPointsThatIntersectWithCars(t *testing.T) {
 	var cases = []struct {
-		input  []int
+		input  [][]int
 		output int
 	}{
 		{
-			input:  []int{1, 1, 2},
-			output: 2,
+			input:  [][]int{{3, 6}, {1, 5}, {4, 7}},
+			output: 7,
 		},
 		{
-			input:  []int{0, 0, 1, 1, 1, 2, 2, 3, 3, 4},
+			input:  [][]int{{1, 3}, {5, 8}},
 			output: 5,
 		},
 	}
 
 	for _, c := range cases {
-		got := RemoveDuplicatesfromSortedArray(c.input)
+		got := PointsThatIntersectWithCars(c.input)
 		if got != c.output {
 			t.Logf("failed: got %d want %d in: %v\n", got, c.output, c.input)
 			t.Fail()
