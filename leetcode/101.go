@@ -14,20 +14,15 @@ package leetcode
 
 // The number of nodes in the tree is in the range [1, 1000].
 // -100 <= Node.val <= 100
-type TreeNodeSymetric struct {
-	Val   int
-	Left  *TreeNodeSymetric
-	Right *TreeNodeSymetric
-}
 
-func SymmetricTree(root *TreeNodeSymetric) bool {
+func SymmetricTree(root *TreeNode) bool {
 	symmetric := true
 	if root == nil {
 		return symmetric
 	}
 
 	// process each node by queue, after check remove (FIFO)
-	var queue []*TreeNodeSymetric
+	var queue []*TreeNode
 	queue = append(queue, root.Left, root.Right)
 
 	for len(queue) > 0 {

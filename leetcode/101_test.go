@@ -4,27 +4,27 @@ import "testing"
 
 func TestSymmetricTree(t *testing.T) {
 	var cases = []struct {
-		input  *TreeNodeSymetric
+		input  *TreeNode
 		output bool
 	}{
 		{
-			input: &TreeNodeSymetric{
+			input: &TreeNode{
 				Val: 1,
-				Left: &TreeNodeSymetric{
+				Left: &TreeNode{
 					Val: 2,
-					Left: &TreeNodeSymetric{
+					Left: &TreeNode{
 						Val: 3,
 					},
-					Right: &TreeNodeSymetric{
+					Right: &TreeNode{
 						Val: 4,
 					},
 				},
-				Right: &TreeNodeSymetric{
+				Right: &TreeNode{
 					Val: 2,
-					Left: &TreeNodeSymetric{
+					Left: &TreeNode{
 						Val: 4,
 					},
-					Right: &TreeNodeSymetric{
+					Right: &TreeNode{
 						Val: 3,
 					},
 				},
@@ -32,17 +32,17 @@ func TestSymmetricTree(t *testing.T) {
 			output: true,
 		},
 		{
-			input: &TreeNodeSymetric{
+			input: &TreeNode{
 				Val: 1,
-				Left: &TreeNodeSymetric{
+				Left: &TreeNode{
 					Val: 2,
-					Right: &TreeNodeSymetric{
+					Right: &TreeNode{
 						Val: 3,
 					},
 				},
-				Right: &TreeNodeSymetric{
+				Right: &TreeNode{
 					Val:   2,
-					Right: &TreeNodeSymetric{Val: 3},
+					Right: &TreeNode{Val: 3},
 				},
 			},
 			output: false,
