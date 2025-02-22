@@ -13,7 +13,7 @@ func TestPointsThatIntersectWithCars(t *testing.T) {
 		},
 		{
 			input:  [][]int{{1, 3}, {5, 8}},
-			output: 5,
+			output: 7,
 		},
 	}
 
